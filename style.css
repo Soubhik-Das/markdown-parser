@@ -1,0 +1,158 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+}
+
+/* Body Styles */
+body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    background: #1e1e2e;
+    color: white;
+    overflow: hidden; /* Prevents extra scrollbars on body */
+}
+
+/* Header */
+.header {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    background: #282a36;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.header h1 {
+    font-size: 24px;
+    font-weight: bold;
+    color: #ffb86c;
+}
+
+/* Clear Button */
+#clearBtn {
+    padding: 10px 20px;
+    background: #ff5555;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 14px;
+    transition: background 0.3s;
+}
+
+#clearBtn:hover {
+    background: #ff4444;
+}
+
+/* Main Container */
+.container {
+    width: 95%;
+    height: 85vh;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    padding: 20px;
+}
+
+/* Editor and Preview Wrapper */
+.editor-preview-container {
+    display: flex;
+    gap: 20px;
+    flex: 1;
+    overflow: hidden; /* Prevents extra scrollbars */
+}
+
+/* Section Titles */
+.section-title {
+    font-size: 18px;
+    font-weight: bold;
+    margin-bottom: 10px;
+    text-align: center;
+    color: #ffb86c;
+}
+
+/* Editor Wrapper */
+.editor-wrapper {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Editor */
+.editor-container {
+    flex: 1;
+    height: 100%;
+    overflow: hidden; /* Prevents double scrollbar */
+}
+
+textarea {
+    width: 100%;
+    height: 100%;
+    background: #282a36;
+    color: white;
+    border: 2px solid #44475a;
+    padding: 15px;
+    font-size: 16px;
+    border-radius: 8px;
+    resize: none;
+    outline: none;
+    overflow-y: auto; /* Enables scrolling inside textarea */
+}
+
+/* Preview Wrapper */
+.preview-wrapper {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Markdown Preview */
+.preview {
+    flex: 1;
+    background: #f8f9fc;
+    color: black;
+    padding: 22px;
+    border-radius: 8px;
+    border: 2px solid #44475a;
+    overflow-y: auto; /* Enables scrolling inside preview */
+    max-height: 100%; /* Prevents extra scrollbar */
+    word-wrap: break-word;
+}
+
+/* Code Blocks */
+pre {
+    background: #282a36 !important;
+    padding: 10px;
+    border-radius: 5px;
+    overflow-x: auto; /* Enables horizontal scrolling for code blocks */
+}
+
+code {
+    font-family: "Courier New", monospace;
+    color: #f8f8f2;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .container {
+        height: auto;
+    }
+
+    .editor-preview-container {
+        flex-direction: column;
+    }
+
+    .editor-wrapper,
+    .preview-wrapper {
+        width: 100%;
+        height: 50vh;
+    }
+}
